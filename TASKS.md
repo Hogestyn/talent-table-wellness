@@ -7,7 +7,6 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 - Add Klaviyo embedded waitlist/newsletter form for future events.
 - Add final CTA links when booking/payment/form links are known.
 - Add favicon and social preview image.
-- Update FAQ heading from "Praktisch, helder, rustig." to "Praktisch."
 - Review final copy details after functional items are live.
 - Run final desktop and mobile QA after all details are complete.
 
@@ -16,6 +15,8 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 No active task.
 
 ## Done
+
+- Updated FAQ heading from "Praktisch, helder, rustig." to "Praktisch."
 
 - Replaced the left image-strip suite photo with the text-free suite photo.
 - Replaced the host placeholder with the Florine and Hanneke photo.
