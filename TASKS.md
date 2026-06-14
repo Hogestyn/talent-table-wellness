@@ -5,7 +5,6 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 ## To Do
 
 - Add Klaviyo embedded waitlist/newsletter form for future events.
-- Replace host placeholder with the Florine and Hanneke photo.
 - Add final CTA links when booking/payment/form links are known.
 - Add favicon and social preview image.
 - Update FAQ heading from "Praktisch, helder, rustig." to "Praktisch."
@@ -17,6 +16,9 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 No active task.
 
 ## Done
+
+- Replaced the left image-strip suite photo with the text-free suite photo.
+- Replaced the host placeholder with the Florine and Hanneke photo.
 
 - Created the static Talent Table - Wellness Edition landing page.
 - Optimized the Provence images for web resolution.

@@ -73,12 +73,14 @@ For visual changes, test at least:
 
 Use this flow for changes:
 
-1. Edit files in the GitHub repository.
-2. Test locally.
-3. Commit with a clear message.
-4. Push to `main`.
-5. Confirm Vercel deployment succeeds.
-6. Check the live domain.
+1. Create or switch to a preview branch; never use `main` as the working branch for new changes.
+2. Edit files in the GitHub repository on that preview branch.
+3. Test locally on desktop and mobile sizes.
+4. Commit with a clear message on the preview branch.
+5. Push the preview branch so Vercel can create a preview deployment.
+6. Review the preview URL and run the testing checklist.
+7. Ask the user for explicit approval before merging or pushing anything to `main`.
+8. Only after approval, merge to `main`, confirm Vercel production deployment succeeds, and check the live domain.
 
 If command-line GitHub auth is unavailable, let the user push through GitHub Desktop.
 
