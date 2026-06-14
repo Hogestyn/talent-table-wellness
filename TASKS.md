@@ -4,6 +4,8 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 
 ## To Do
 
+- Decide whether to add an Instagram feed or curated Instagram-style grid section.
+- Add a newsletter signup specifically for Talent Table updates and future editions.
 - Replace temporary `hello@rockyourworld.co` mailto links with the Better Together email address once the email server is ready.
 - Add Klaviyo embedded waitlist/newsletter form for future events.
 - Add final CTA links when booking/payment/form links are known.
