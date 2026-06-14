@@ -21,6 +21,16 @@ Work from the GitHub repository when deploying changes:
 
 The deployed production site is connected to Vercel through the `main` branch.
 
+## Task Board
+
+Use `TASKS.md` as the project board.
+
+- Keep tasks grouped under To Do, Doing, and Done.
+- Move only one task into Doing at a time.
+- Before starting work, update Doing.
+- After finishing and verifying work, move the task to Done.
+- Do not start a new task until the user confirms the previous one is ready or gives a clear next priority.
+
 ## Non-Negotiables
 
 - Do not call it a retreat or retraite. Use "slow escape".
