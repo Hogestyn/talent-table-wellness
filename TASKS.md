@@ -8,6 +8,7 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 - Replace host placeholder with the Florine and Hanneke photo.
 - Add final CTA links when booking/payment/form links are known.
 - Add favicon and social preview image.
+- Update FAQ heading from "Praktisch, helder, rustig." to "Praktisch."
 - Review final copy details after functional items are live.
 - Run final desktop and mobile QA after all details are complete.
 
