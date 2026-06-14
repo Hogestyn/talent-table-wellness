@@ -12,6 +12,8 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 
 ## Doing
 
+- Awaiting preview approval: remove visible hero email address under the reservation buttons.
+
 ## Done
 
 - Updated FAQ heading from "Praktisch, helder, rustig." to "Praktisch." after preview approval.
