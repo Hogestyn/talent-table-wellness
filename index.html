@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talent Table - Wellness Edition</title>
+  <meta name="description" content="Een intieme 4-daagse luxury wellness slow escape in Provence voor vrouwelijke founders.">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700&display=swap");
+
+    :root {
+      --paper: #fbf8f1;
+      --porcelain: #fffdf8;
+      --cream: #f2eadf;
+      --linen: #e8ddce;
+      --sage: #8d9678;
+      --sage-deep: #5f664e;
+      --olive: #333b2d;
+      --wine: #622d30;
+      --wine-soft: #7e4948;
+      --ink: #352d27;
+      --muted: #776b5f;
+      --gold: #b7a06c;
+      --line: rgba(98, 45, 48, 0.16);
+      --shadow: 0 28px 80px rgba(72, 51, 37, 0.14);
+      --reserve-link: "mailto:hello@example.com?subject=Talent%20Table%20Wellness%20Edition";
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: clip;
+    }
+
+    body {
+      margin: 0;
+      width: 100%;
+      overflow-x: clip;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(98, 45, 48, 0.035) 1px, transparent 1px) 0 0 / 96px 96px,
+        var(--paper);
+      font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    p,
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+    }
+
+    .serif {
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-weight: 300;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px clamp(20px, 4vw, 60px);
+      color: #fff;
+      background: linear-gradient(to bottom, rgba(31, 25, 20, 0.52), rgba(31, 25, 20, 0));
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.45rem, 2vw, 2rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2.3vw, 34px);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .nav-cta {
+      padding: 12px 17px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      color: #fff;
+      background: var(--olive);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(23, 24, 18, 0.18), rgba(23, 24, 18, 0.08) 38%, rgba(23, 24, 18, 0.54)),
+        radial-gradient(circle at 50% 64%, rgba(255, 255, 255, 0.2), transparent 34%);
+      pointer-events: none;
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(1240px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 132px 0 56px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin-top: 22px;
+      font-size: clamp(5.8rem, 14vw, 13.2rem);
+      line-height: 0.78;
+      text-shadow: 0 20px 70px rgba(0, 0, 0, 0.34);
+    }
+
+    .hero-subtitle {
+      margin-top: 18px;
+      font-size: clamp(2.4rem, 6vw, 6rem);
+      font-style: italic;
+      line-height: 0.88;
+      text-shadow: 0 14px 52px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-date {
+      margin-top: 46px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.45rem, 2.4vw, 2.35rem);
+      font-weight: 300;
+    }
+
+    .hero-actions,
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 23px;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.light {
+      color: #fff;
+    }
+
+    .button.fill {
+      color: var(--wine);
+      background: #fffaf2;
+      border-color: #fffaf2;
+    }
+
+    .button.dark {
+      color: var(--wine);
+    }
+
+    .button.dark:hover {
+      color: #fff;
+      background: var(--wine);
+      border-color: var(--wine);
+    }
+
+    .link-note {
+      max-width: 520px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.6;
+    }
+
+    .section {
+      padding: clamp(76px, 9vw, 142px) clamp(20px, 5vw, 78px);
+    }
+
+    .section-inner {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .intro {
+      background: var(--porcelain);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.7fr);
+      gap: clamp(38px, 7vw, 104px);
+      align-items: end;
+    }
+
+    .intro h2,
+    .wide-title,
+    .section-title,
+    .closing h2 {
+      font-size: clamp(3rem, 6.7vw, 7.3rem);
+      font-weight: 300;
+      line-height: 0.98;
+      color: var(--wine);
+    }
+
+    .intro-copy {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: clamp(1.03rem, 1.25vw, 1.22rem);
+      line-height: 1.85;
+    }
+
+    .editorial-image {
+      position: relative;
+      min-height: 540px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--linen);
+    }
+
+    .editorial-image.short {
+      min-height: 390px;
+    }
+
+    .caption {
+      position: absolute;
+      left: 22px;
+      bottom: 20px;
+      z-index: 2;
+      padding: 9px 14px;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 999px;
+      background: rgba(32, 27, 22, 0.24);
+      backdrop-filter: blur(12px);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .image-strip {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr 0.9fr;
+      gap: clamp(14px, 2vw, 24px);
+      padding: 0 clamp(20px, 5vw, 78px) clamp(74px, 8vw, 120px);
+      background: var(--porcelain);
+    }
+
+    .image-strip figure {
+      min-height: 500px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--linen);
+    }
+
+    .image-strip figure:nth-child(2) {
+      transform: translateY(44px);
+    }
+
+    .image-strip figure:nth-child(3) {
+      min-height: 430px;
+      align-self: end;
+    }
+
+    .manifesto {
+      position: relative;
+      min-height: 82vh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: clamp(82px, 10vw, 150px) clamp(20px, 5vw, 78px);
+      color: #fff;
+      text-align: center;
+      background: var(--sage-deep);
+    }
+
+    .manifesto img {
+      position: absolute;
+      inset: 0;
+    }
+
+    .manifesto::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(34, 39, 27, 0.48);
+    }
+
+    .manifesto-content {
+      position: relative;
+      z-index: 2;
+      width: min(1040px, 100%);
+    }
+
+    .manifesto h2 {
+      font-size: clamp(3.2rem, 7.6vw, 8.4rem);
+      line-height: 0.96;
+      font-weight: 300;
+    }
+
+    .manifesto p {
+      max-width: 760px;
+      margin: 30px auto 0;
+      font-size: clamp(1.1rem, 1.6vw, 1.55rem);
+      line-height: 1.75;
+    }
+
+    .plan {
+      background: var(--paper);
+    }
+
+    .plan-grid {
+      display: grid;
+      grid-template-columns: 0.76fr 1fr;
+      gap: clamp(42px, 7vw, 104px);
+      align-items: start;
+    }
+
+    .sticky-title {
+      position: sticky;
+      top: 110px;
+    }
+
+    .plan-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .plan-item {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 22px;
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .plan-item:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .number {
+      color: var(--gold);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+
+    .plan-item h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2rem, 3vw, 3.4rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--wine);
+    }
+
+    .plan-item p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .split {
+      background: var(--cream);
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+      gap: clamp(38px, 7vw, 104px);
+      align-items: center;
+    }
+
+    .split-copy p,
+    .host-copy p {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.35vw, 1.24rem);
+      line-height: 1.85;
+    }
+
+    .inclusions {
+      background: var(--porcelain);
+    }
+
+    .inclusion-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 58px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .inclusion-card {
+      min-height: 250px;
+      padding: clamp(28px, 3.5vw, 44px);
+      background: var(--porcelain);
+    }
+
+    .inclusion-card h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.9rem, 3vw, 3.1rem);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--wine);
+    }
+
+    .inclusion-card p {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.72;
+    }
+
+    .pricing {
+      background: var(--wine);
+      color: #fff7ec;
+    }
+
+    .pricing .wide-title {
+      color: #fff7ec;
+      text-align: center;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(18px, 3vw, 34px);
+      width: min(980px, 100%);
+      margin: 56px auto 0;
+    }
+
+    .price-card {
+      display: grid;
+      gap: 24px;
+      justify-items: center;
+      padding: clamp(34px, 4.4vw, 58px);
+      text-align: center;
+      border: 1px solid rgba(255, 247, 236, 0.28);
+      background: rgba(255, 247, 236, 0.08);
+    }
+
+    .price-card h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2.2rem, 3.8vw, 4rem);
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .price {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(4.8rem, 8vw, 7.8rem);
+      font-weight: 300;
+      line-height: 0.9;
+    }
+
+    .price-card p {
+      max-width: 330px;
+      color: rgba(255, 247, 236, 0.74);
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    .price-card .button {
+      color: #fff7ec;
+    }
+
+    .price-card .button:hover {
+      color: var(--wine);
+      background: #fff7ec;
+      border-color: #fff7ec;
+    }
+
+    .hosts {
+      background: var(--cream);
+    }
+
+    .host-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.78fr);
+      gap: clamp(38px, 7vw, 104px);
+      align-items: center;
+    }
+
+    .host-copy h2 {
+      font-size: clamp(2.9rem, 6vw, 6.5rem);
+      line-height: 0.96;
+      color: var(--wine);
+    }
+
+    .faq {
+      background: var(--paper);
+    }
+
+    .faq-list {
+      width: min(980px, 100%);
+      margin: 54px auto 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      background: rgba(255, 253, 248, 0.78);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 28px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.65rem, 2.4vw, 2.6rem);
+      color: var(--wine);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      color: var(--gold);
+      font-family: "Manrope", sans-serif;
+      font-size: 1.4rem;
+      line-height: 1.8;
+    }
+
+    details[open] summary::after {
+      content: "-";
+    }
+
+    details p {
+      padding: 0 28px 28px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .closing {
+      position: relative;
+      min-height: 82vh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: clamp(82px, 10vw, 150px) clamp(20px, 5vw, 78px);
+      color: #fff;
+      text-align: center;
+      background: var(--olive);
+    }
+
+    .closing img {
+      position: absolute;
+      inset: 0;
+    }
+
+    .closing::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(33, 28, 21, 0.52);
+    }
+
+    .closing-content {
+      position: relative;
+      z-index: 2;
+      width: min(980px, 100%);
+    }
+
+    .closing h2 {
+      color: #fff;
+    }
+
+    .closing p {
+      max-width: 710px;
+      margin: 26px auto 0;
+      font-size: clamp(1.08rem, 1.5vw, 1.35rem);
+      line-height: 1.78;
+    }
+
+    .site-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 30px clamp(20px, 5vw, 78px);
+      color: var(--wine);
+      background: var(--porcelain);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .edit-links {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .site-header {
+        position: absolute;
+      }
+
+      .site-nav {
+        display: none;
+      }
+
+      .intro-grid,
+      .plan-grid,
+      .split-grid,
+      .host-grid,
+      .price-grid,
+      .inclusion-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sticky-title {
+        position: static;
+      }
+
+      .image-strip {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .image-strip figure,
+      .image-strip figure:nth-child(3) {
+        min-height: 420px;
+      }
+
+      .image-strip figure:nth-child(2) {
+        transform: none;
+      }
+
+      .image-strip figure:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .site-header {
+        padding: 18px;
+      }
+
+      .hero {
+        min-height: 92svh;
+      }
+
+      .hero-content {
+        width: min(100% - 28px, 1240px);
+        padding-bottom: 34px;
+      }
+
+      .hero h1 {
+        font-size: clamp(4.6rem, 22vw, 7.3rem);
+      }
+
+      .hero-subtitle {
+        font-size: clamp(2.35rem, 12vw, 4rem);
+      }
+
+      .hero-date {
+        margin-top: 30px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .section {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .intro h2,
+      .wide-title,
+      .section-title,
+      .closing h2 {
+        font-size: clamp(3rem, 14vw, 5.4rem);
+      }
+
+      .editorial-image {
+        min-height: 470px;
+      }
+
+      .image-strip {
+        display: block;
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .image-strip figure,
+      .image-strip figure:nth-child(3) {
+        min-height: 440px;
+        margin-bottom: 14px;
+      }
+
+      .plan-item {
+        grid-template-columns: 38px 1fr;
+        gap: 16px;
+      }
+
+      .site-footer {
+        display: block;
+      }
+
+      .site-footer span:last-child {
+        display: block;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--
+    LINKS AANPASSEN:
+    Vervang hieronder de href-waarden door je eigen betaal-, boekings- of contactlinks.
+    Zoek in dit bestand naar: href="mailto:hello@example.com
+  -->
+  <header class="site-header">
+    <a class="brand" href="#top">Talent Table</a>
+    <nav class="site-nav" aria-label="Hoofdnavigatie">
+      <a href="#edition">Slow escape</a>
+      <a href="#plan">Plan</a>
+      <a href="#included">Included</a>
+      <a href="#prijzen">Prijzen</a>
+      <a class="nav-cta" href="mailto:hello@example.com?subject=Talent%20Table%20Wellness%20Edition">Reserveer</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Talent Table Wellness Edition">
+      <img src="web-resolution/pool-wide.jpg" alt="Zwembad bij de Provence villa zonder tekstoverlay">
+      <div class="hero-content">
+        <p class="eyebrow">Provence Slow Escape for Female Founders</p>
+        <h1 class="serif">Talent Table</h1>
+        <p class="hero-subtitle serif">Wellness Edition</p>
+        <p class="hero-date">7-10 oktober, Provence</p>
+        <div class="hero-actions">
+          <a class="button fill" href="mailto:hello@example.com?subject=Ik%20wil%20mijn%20plek%20reserveren%20voor%20Talent%20Table">Reserveer je plek</a>
+          <a class="button light" href="#edition">Ontdek de slow escape</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro" id="edition">
+      <div class="section-inner intro-grid">
+        <div>
+          <p class="eyebrow">Only 4 seats</p>
+          <h2 class="serif">A slow getaway for women building a meaningful life and business</h2>
+        </div>
+        <div class="intro-copy">
+          <p>Een exclusieve 4-daagse luxury wellness slow escape om op adem te komen en inspiratie te vinden voor de new era of womanhood. Op een intieme droomlocatie in Provence, met ruimte voor slechts vier vrouwelijke founders.</p>
+          <p>Deze slow escape draait om wellness, niet als to-do list, maar als nourishment voor body, mind en soul.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-strip" aria-label="Sfeerbeelden van Talent Table">
+      <figure><img src="web-resolution/suite.jpg" alt="Eigen suite in de Provence villa"></figure>
+      <figure><img src="web-resolution/garden-table.jpg" alt="Gedekte tafel in de tuin"></figure>
+      <figure><img src="web-resolution/breakfast-clean.jpg" alt="Ontbijt en zachte ochtendmaaltijd"></figure>
+    </section>
+
+    <section class="manifesto">
+      <img src="web-resolution/breakfast-clean.jpg" alt="Zachte ochtendmaaltijd in Provence">
+      <div class="manifesto-content">
+        <p class="eyebrow">Wellness Edition</p>
+        <h2 class="serif">Come home to yourself before the year turns.</h2>
+        <p>Vier dagen lang word je volledig verzorgd: je eigen suite, privétransfer van en naar het vliegveld, dagelijkse Pilates, Farm To Table koken en gesprekken met vrouwen die net als jij bouwen aan iets betekenisvols.</p>
+      </div>
+    </section>
+
+    <section class="section plan" id="plan">
+      <div class="section-inner plan-grid">
+        <div class="sticky-title">
+          <p class="eyebrow">This is the plan</p>
+          <h2 class="section-title serif">Soft structure, deep rest, clear direction.</h2>
+        </div>
+        <div class="plan-list">
+          <article class="plan-item">
+            <span class="number">01</span>
+            <div>
+              <h3>Pilates aan het zwembad</h3>
+              <p>De dag begint met ochtendzon, beweging en genoeg stilte om rustig in je lijf te landen.</p>
+            </div>
+          </article>
+          <article class="plan-item">
+            <span class="number">02</span>
+            <div>
+              <h3>Wandelen in de wijngaarden</h3>
+              <p>Een weids uitzicht, frisse lucht en tijd om opnieuw richting te voelen voor jezelf en je business.</p>
+            </div>
+          </article>
+          <article class="plan-item">
+            <span class="number">03</span>
+            <div>
+              <h3>Nourishing conversations at a beautifully set table</h3>
+              <p>Gesprekken die verzachten, spiegelen en inspireren, tijdens lange lunches en diners in de tuin.</p>
+            </div>
+          </article>
+          <article class="plan-item">
+            <span class="number">04</span>
+            <div>
+              <h3>Farm To Table kookworkshop</h3>
+              <p>Een Provençaalse middag met lokale producten, eenvoud, smaak en samen creëren.</p>
+            </div>
+          </article>
+          <article class="plan-item">
+            <span class="number">05</span>
+            <div>
+              <h3>Female Movement &amp; deep reset</h3>
+              <p>Voor een rustiger zenuwstelsel, meer helderheid en de zachte trots van thuiskomen bij jezelf.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div class="section-inner split-grid">
+        <figure class="editorial-image">
+          <img src="web-resolution/farm-table.jpg" alt="Farm to table gerecht met gegrilde groenten">
+          <figcaption class="caption">Farm To Table</figcaption>
+        </figure>
+        <div class="split-copy">
+          <p class="eyebrow">The feeling</p>
+          <h2 class="section-title serif">Grounding, pride, connection and clarity.</h2>
+          <p>Met dat gevoel reis je terug naar huis: helder in je hoofd, zachter in je lijf en klaar voor het laatste kwartaal van 2026. Niet vanuit harder werken, maar vanuit beter luisteren.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section inclusions" id="included">
+      <div class="section-inner">
+        <p class="eyebrow">Included</p>
+        <h2 class="wide-title serif">Deelname is inclusief persoonlijke Talent Reading op basis van je geboortehoroscoop.</h2>
+        <div class="inclusion-grid">
+          <article class="inclusion-card">
+            <h3>Own suite</h3>
+            <p>Een eenpersoonskamer in de hidden villa, zodat je privacy en diepe rust hebt tussen de gezamenlijke momenten door.</p>
+          </article>
+          <article class="inclusion-card">
+            <h3>Home-cooked meals</h3>
+            <p>Dagelijkse maaltijden, seizoensproducten en een Farm To Table kookworkshop in Provençaalse stijl.</p>
+          </article>
+          <article class="inclusion-card">
+            <h3>All arranged</h3>
+            <p>Transfer van en naar het vliegveld, Pilates, begeleide sessies en alle zorgvuldig samengestelde momenten.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="prijzen">
+      <div class="section-inner">
+        <p class="eyebrow" style="text-align:center;">Reserve your seat at the table</p>
+        <h2 class="wide-title serif">Only 4 seats.</h2>
+        <div class="price-grid">
+          <article class="price-card">
+            <h3>Early Bird<br>t/m 1 juli</h3>
+            <div class="price">1950,-</div>
+            <p>Exclusief btw. Betalen in delen is mogelijk.</p>
+            <a class="button" href="mailto:hello@example.com?subject=Talent%20Table%20Early%20Bird">Ik ben erbij</a>
+          </article>
+          <article class="price-card">
+            <h3>Lazy Bird<br>na 1 juli</h3>
+            <div class="price">2150,-</div>
+            <p>Exclusief btw. Betalen in delen is mogelijk.</p>
+            <a class="button" href="mailto:hello@example.com?subject=Talent%20Table%20Lazy%20Bird">Ik ben erbij</a>
+          </article>
+        </div>
+        <p class="link-note">Tip: vervang de mailto-links in dit bestand door je eigen betaalpagina, Calendly, Typeform, Tally of WhatsApp-link.</p>
+      </div>
+    </section>
+
+    <section class="section hosts" id="hosts">
+      <div class="section-inner host-grid">
+        <div class="host-copy">
+          <p class="eyebrow">Meet Your Hosts &amp; Founders van Better Together</p>
+          <h2 class="serif">Florine Duif en Hanneke Peeters</h2>
+          <p>De Talent Table is onderdeel van Better Together, een initiatief van Florine Duif en Hanneke Peeters. Samen bouwen zij aan een nieuwe wereld voor vrouwen waarin ambitie en well-being elkaar versterken.</p>
+          <p>Deze slow escape is ontworpen als een intieme pauze: een plek waar strategie, zachtheid, sisterhood en zelfleiderschap in dezelfde adem mogen bestaan.</p>
+        </div>
+        <figure class="editorial-image short">
+          <img src="web-resolution/suite.jpg" alt="Suite als rustige host placeholder">
+          <figcaption class="caption">Host photo placeholder</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="section-inner">
+        <p class="eyebrow" style="text-align:center;">F.A.Q.</p>
+        <h2 class="wide-title serif" style="text-align:center;">Praktisch, helder, rustig.</h2>
+        <div class="faq-list">
+          <details>
+            <summary>De locatie</summary>
+            <p>De Talent Table vindt plaats in een verborgen villa in Provence. Denk aan zachte ochtenden aan het zwembad, lange tafels in de tuin en genoeg stilte om echt te zakken.</p>
+          </details>
+          <details>
+            <summary>Je plek reserveren</summary>
+            <p>Er is ruimte voor vier vrouwen. Je reserveert je plek via de knop op deze pagina; daarna ontvang je de praktische informatie en betaalmogelijkheden.</p>
+          </details>
+          <details>
+            <summary>Voor wie is deze slow escape?</summary>
+            <p>Voor vrouwelijke founders en ondernemers die ambitie willen combineren met well-being, helderheid en een nieuwe manier van werken en leven.</p>
+          </details>
+          <details>
+            <summary>Wat is inbegrepen?</summary>
+            <p>Je eigen suite, home-cooked maaltijden, Farm To Table kookworkshop, Pilates, transfer van en naar het vliegveld, inspirerende sessies en je persoonlijke talent reading.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <img src="web-resolution/garden-table.jpg" alt="Lange tafel in de tuin bij avondlicht">
+      <div class="closing-content">
+        <p class="eyebrow">Talent Table - Wellness Edition</p>
+        <h2 class="serif">A seat at the table, a breath before the next chapter.</h2>
+        <p>Een intieme Talent Table voor forward-thinking vrouwen die geloven in the new era of womanhood. Rustig, hoogwaardig en persoonlijk samengesteld.</p>
+        <div class="button-row">
+          <a class="button fill" href="mailto:hello@example.com?subject=Talent%20Table%20Wellness%20Edition">Reserveer je plek</a>
+          <a class="button light" href="#faq">Lees de FAQ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Talent Table - Wellness Edition</span>
+    <span>7-10 oktober, Provence</span>
+  </footer>
+</body>
+</html>
