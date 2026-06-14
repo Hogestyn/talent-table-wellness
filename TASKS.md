@@ -12,10 +12,9 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 
 ## Doing
 
-- Awaiting preview approval: remove visible payment/link tip under pricing.
-
 ## Done
 
+- Removed the visible payment/link tip under pricing after preview approval.
 - Removed the visible hero email address under the reservation buttons after preview approval.
 - Updated FAQ heading from "Praktisch, helder, rustig." to "Praktisch." after preview approval.
 
