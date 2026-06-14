@@ -12,9 +12,9 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 
 ## Doing
 
-- Awaiting preview approval: FAQ heading changed from "Praktisch, helder, rustig." to "Praktisch."
-
 ## Done
+
+- Updated FAQ heading from "Praktisch, helder, rustig." to "Praktisch." after preview approval.
 
 - Replaced the left image-strip suite photo with the text-free suite photo.
 - Replaced the host placeholder with the Florine and Hanneke photo.
