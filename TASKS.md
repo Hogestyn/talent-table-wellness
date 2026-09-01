@@ -15,9 +15,12 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 
 ## Doing
 
-- Build the first Better Together umbrella-site preview, with the current Provence slow escape preserved as a nested experience.
+- None.
 
 ## Done
+
+- Ran the website copy through the AI-style check: removed long dashes, reduced generic marketing language, and made the visible copy more direct and natural.
+- Built the first Better Together umbrella-site preview, with the current Provence slow escape preserved as a nested experience.
 
 - Removed the visible payment/link tip under pricing after preview approval.
 - Removed the visible hero email address under the reservation buttons after preview approval.
