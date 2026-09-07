@@ -15,10 +15,11 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 
 ## Doing
 
-- Process final homepage copy feedback, run complete launch QA, and publish the approved Better Together site.
+- None.
 
 ## Done
 
+- Processed the final homepage copy feedback, verified desktop, mobile, navigation, invitations, routes, assets, and checkout links, and launched the approved Better Together V2 site.
 - Built Better Together V2 with a refined homepage and clickable Talent Tables, Founder Studio, Slow Escapes, and Partnerships routes.
 - Added the Back to Your Power Vision Day sales page with a direct handoff to the Plug&Pay checkout.
 - Added a public partnership landing page based on the two supplied partnership sources, without publishing partner-specific or confidential details.
