@@ -15,7 +15,7 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 
 ## Doing
 
-- None.
+- Publish the confirmed 26 November 2026 date for The Legal Table.
 
 ## Done
 
