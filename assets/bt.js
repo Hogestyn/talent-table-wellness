@@ -35,7 +35,7 @@ if (signupTriggers.length) {
             <label class="invitation-field"><span>Email address</span><input name="email" type="email" autocomplete="email" required></label>
             <label class="invitation-consent"><input name="consent" type="checkbox" required><span>Ja, ik ontvang graag uitnodigingen en updates van Better Together. Uitschrijven kan op elk moment.</span></label>
             <input name="interest" type="hidden" value="General Better Together">
-            <button class="button invitation-submit" type="submit">Put me on the list</button>
+            <button class="button invitation-submit" type="submit">Receive invitations</button>
             <p class="invitation-status" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -68,7 +68,7 @@ if (signupTriggers.length) {
     interestInput.value = interest;
     status.textContent = "";
     intro.textContent = interest === "The Legal Table"
-      ? "Join the waiting list for The Legal Table. Je ontvangt als eerste bericht zodra de nieuwe editie opent."
+      ? "Ontvang als eerste bericht zodra de nieuwe editie van The Legal Table opent."
       : "Ontvang uitnodigingen voor nieuwe Talent Tables, Founder Studio-programma’s, Slow Escapes en bijzondere Better Together experiences.";
     layer.classList.add("open");
     layer.setAttribute("aria-hidden", "false");
@@ -145,7 +145,7 @@ if (signupTriggers.length) {
       console.error(error);
     } finally {
       submitButton.disabled = false;
-      submitButton.textContent = "Put me on the list";
+      submitButton.textContent = "Receive invitations";
     }
   });
 }

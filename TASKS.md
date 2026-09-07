@@ -15,7 +15,7 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 
 ## Doing
 
-- None.
+- Process final homepage copy feedback, run complete launch QA, and publish the approved Better Together site.
 
 ## Done
 
