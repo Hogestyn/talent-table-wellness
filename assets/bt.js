@@ -1,16 +1,24 @@
 const menuButton = document.querySelector(".menu-button");
 const nav = document.querySelector(".nav");
+const siteHeader = document.querySelector(".site-header");
+
+const setMenuState = (open) => {
+  nav.classList.toggle("open", open);
+  siteHeader?.classList.toggle("menu-open", open);
+  document.body.classList.toggle("menu-open", open);
+  menuButton.setAttribute("aria-expanded", String(open));
+  menuButton.setAttribute("aria-label", open ? "Sluit menu" : "Open menu");
+  menuButton.textContent = open ? "×" : "☰";
+};
 
 if (menuButton && nav) {
   menuButton.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
-    menuButton.setAttribute("aria-expanded", String(open));
+    setMenuState(!nav.classList.contains("open"));
   });
 
   nav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      nav.classList.remove("open");
-      menuButton.setAttribute("aria-expanded", "false");
+      setMenuState(false);
     });
   });
 }

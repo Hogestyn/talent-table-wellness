@@ -28,6 +28,7 @@ button, input { font: inherit; }
 .brand { font-family: var(--serif); font-size: 1.45rem; letter-spacing: .05em; }
 .nav { display: flex; align-items: center; gap: 28px; font-size: .7rem; font-weight: 500; letter-spacing: .11em; text-transform: uppercase; }
 .nav a { padding: 8px 0; }
+.mobile-nav-home { display: none; }
 .nav-cta { border-bottom: 1px solid currentColor; }
 .menu-button { display: none; border: 0; background: transparent; color: inherit; font-size: 1.35rem; cursor: pointer; }
 
@@ -135,6 +136,7 @@ button, input { font: inherit; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .73rem; }
 
 body.drawer-open { overflow: hidden; }
+body.menu-open { overflow: hidden; }
 .invitation-layer { position: fixed; z-index: 100; inset: 0; visibility: hidden; pointer-events: none; }
 .invitation-layer.open { visibility: visible; pointer-events: auto; }
 .invitation-backdrop { position: absolute; inset: 0; border: 0; background: rgba(20,19,17,.38); opacity: 0; transition: opacity .35s ease; cursor: default; }
@@ -167,7 +169,11 @@ body.drawer-open { overflow: hidden; }
   .nav { display: none; }
   .menu-button { display: block; }
   .site-header { padding: 24px 22px; }
-  .site-header .nav.open { position: absolute; top: 76px; left: 18px; right: 18px; display: flex; flex-direction: column; align-items: stretch; gap: 8px; padding: 25px; background: var(--paper); color: var(--ink); box-shadow: 0 16px 40px rgba(0,0,0,.12); }
+  .site-header .nav.open { position: fixed; z-index: 30; inset: 0; display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 8px; min-height: 100dvh; padding: 92px 25px 32px; overflow-y: auto; background: var(--paper); color: var(--ink); }
+  .site-header .nav.open .mobile-nav-home { display: block; }
+  .site-header.menu-open .brand, .site-header.menu-open .menu-button { position: relative; z-index: 31; color: var(--ink); }
+  .site-header.menu-open .menu-button { position: fixed; top: 22px; right: 22px; }
+  .hero.compact .hero-content { padding-top: 118px; }
   .table-row { grid-template-columns: .65fr 1.35fr 1fr; }
   .table-row > .text-link { grid-column: 2 / -1; }
   .facts { grid-template-columns: repeat(2, 1fr); }

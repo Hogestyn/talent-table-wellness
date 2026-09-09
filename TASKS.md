@@ -15,10 +15,10 @@ Use this file to keep work calm and visible. Move only one task into Doing at a 
 
 ## Doing
 
-- Publish the confirmed 26 November 2026 date for The Legal Table.
-
 ## Done
 
+- Added the curated September 2026 Better Together photography to the approved non-hero image positions on a preview branch, preserved all shared Provence assets, and fixed the regular Better Together mobile navigation without changing desktop navigation.
+- Published the confirmed 26 November 2026 date for The Legal Table.
 - Processed the final homepage copy feedback, verified desktop, mobile, navigation, invitations, routes, assets, and checkout links, and launched the approved Better Together V2 site.
 - Built Better Together V2 with a refined homepage and clickable Talent Tables, Founder Studio, Slow Escapes, and Partnerships routes.
 - Added the Back to Your Power Vision Day sales page with a direct handoff to the Plug&Pay checkout.
